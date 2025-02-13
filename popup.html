@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extension</title>
+    <link rel="stylesheet" href="styles_data.css">
+</head>
+<body>
+    <div class="container">
+        <!-- User Greeting -->
+        <div id="user-greeting" class="user-greeting"></div>
+
+        <!-- Content that appears after authentication -->
+        <div id="content" style="display: none;">
+            <!-- YouTube Video Title -->
+            <div id="video-title" class="video-title"></div>
+
+            <!-- Tags container style -->
+            <div class="tags-container">
+                <div class="tag" id="wholesome">Wholesome</div>
+                <div class="tag" id="adrenaline">Adrenaline</div>
+                <div class="tag" id="til">Today I Learned</div>
+                <div class="tag" id="alt-music">Alt Music</div>
+                <div class="tag" id="inspiring">Inspiring</div>
+                <div class="tag" id="brainrot">Brainrot</div>
+            </div>
+
+            <!-- Submit button -->
+            <button id="submit-btn">Submit</button>
+
+            <!-- New Button to open Data Page -->
+            <button id="data-page-btn">View Stored Data</button>
+        </div>
+
+        <!-- Login button (only shown if not authenticated) -->
+        <button id="login-btn" style="display: none;">Login with Google</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

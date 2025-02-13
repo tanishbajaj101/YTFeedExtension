@@ -1,0 +1,99 @@
+/* Styles for the popup container */
+.container {
+  width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style for the video title */
+.video-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Basic style for the heart SVG */
+.emoji-btn {
+  cursor: pointer;
+  transition: fill 0.3s ease; /* Smooth transition for the color change */
+  margin-bottom: 20px;
+  width: 100px;
+  height: 90px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center the heart horizontally */
+}
+
+/* Initial faint pink gradient for the heart (Faint pink to a little darker pink) */
+#heart-path {
+  fill: url(#heart-initial-gradient);
+}
+
+/* When clicked, change gradient to red */
+.clicked #heart-path {
+  fill: url(#clicked-heart-gradient);
+}
+
+/* Define the gradient for the initial faint pink state */
+#heart-initial-gradient {
+  stop-color: #f2b0b0; /* Very faint pink */
+  stop-opacity: 1;
+}
+
+/* Define the gradient for the clicked red state */
+#clicked-heart-gradient {
+  stop-color: #ff4d4d; /* Strong red */
+  stop-opacity: 1;
+}
+
+/* Tags container style */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Individual tag style */
+.tag {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Change color when tag is selected */
+.tag.selected {
+  background-color: yellow;
+  color: #333;
+}
+
+/* Submit button style */
+#submit-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Heart and Tags container */
+.heart-and-tags-container {
+  text-align: center; /* Ensure all content in this container is centered */
+  width: 100%; /* Ensure the container takes up the full width */
+}

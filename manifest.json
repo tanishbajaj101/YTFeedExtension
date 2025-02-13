@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Enhanced YouTube Experience",
+  "version": "1.0",
+  "description": "Injects custom videos into the YouTube feed, stores video data, and retrieves YouTube video titles.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://ytfeedserver.onrender.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["style_content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "data_page.html",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

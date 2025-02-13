@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Adjusted to allow more space */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.top-heading{
+    color: black;
+    text-align: center;
+}
+
+.tag {
+    background-color: #e1e1e1;
+    color: #333;
+    padding: 12px 24px;
+    margin: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #d4d4d4;
+}
+
+.tag.selected {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Video Container */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Flexible columns */
+    gap: 15px;  /* Reduced gap for lighter spacing */
+    margin-top: 20px;
+    justify-items: center;  /* Ensures content is centered in each cell */
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 6px;  /* Reduced from 15px to 12px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    clip-path: inset(13% 0); /* This crops 5% from top and bottom */
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05);  /* Slightly enlarges the thumbnail on hover */
+}
+
+/* Title & View Count */
+.video-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.video-views {
+    font-size: 1rem;
+    color: #888;
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .video-container {
+        grid-template-columns: 1fr;  /* 1 column on smaller screens */
+    }
+}
