@@ -85,10 +85,11 @@ function injectVideos() {
     // Inject all videos into the flex container
     allVideos.forEach((video) => {
       const videoElement = document.createElement("div");
+      const textColor = isDarkModeEnabled() ? "white" : "black";
       videoElement.className = "custom-video-item";
 
       videoElement.innerHTML = `
-        <a href="https://www.youtube.com/watch?v=${video.videoId}" class="custom-video-link" target="_blank">
+        <a href="https://www.youtube.com/watch?v=${video.videoId}" class="custom-video-link" target="_blank" style="text-decoration: none; color: ${textColor};">
           <div class="thumbnail-container">
             <img src="${video.thumbnail}" alt="${video.title}" class="thumbnail">
             <div class="tag-badge">#${video.tag}</div> <!-- Tag badge added here -->
@@ -164,14 +165,9 @@ function createToggleButton() {
   }
 }
 
-// Function to detect dark mode
 function isDarkModeEnabled() {
-  const body = document.body;
-  // Check for dark mode class or specific styles
-  if (body.classList.contains('dark') || window.getComputedStyle(body).backgroundColor === 'rgb(15, 15, 15)') {
-    return true;
-  }
-  return false;
+  const hasDarkAttribute = document.documentElement.hasAttribute('dark');
+  return hasDarkAttribute
 }
 
 // Function to apply styles based on the mode

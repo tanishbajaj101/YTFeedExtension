@@ -105,33 +105,11 @@
 
 
 #custom-toggle-button:hover {
-  background-color: #054daa;
+  color: black;
 }
 
 /* Dark Mode Styles */
 .dark-mode .custom-video-header {
   color: white;
   background-color: #065fd4;
-}
-
-.dark-mode .video-title,
-.dark-mode .channel-name,
-.dark-mode .meta-info,
-.dark-mode .views,
-.dark-mode .time-ago {
-  color: white !important; /* Force white text in dark mode */
-}
-
-/* Light Mode Styles */
-.light-mode .custom-video-header {
-  color: black;
-  background-color: #f1f1f1;
-}
-
-.light-mode .video-title,
-.light-mode .channel-name,
-.light-mode .meta-info,
-.light-mode .views,
-.light-mode .time-ago {
-  color: black !important; /* Force black text in light mode */
 }
