@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const videoUrl = tabs[0].url;
             const videoTitle = tabs[0].title;
 
-            if (videoUrl.includes("youtube.com")) {
+            if (videoUrl.includes("youtube.com")) {                 
                 fetch('https://ytfeedserver.onrender.com/api/store-data', {
                     method: 'POST',
                     headers: {
@@ -59,16 +59,23 @@ document.addEventListener('DOMContentLoaded', function() {
                         tags: selectedTags
                     })
                 })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        alert(`'Error storing data'}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    alert('Data stored successfully');
+                    alert(`Success: ${data.message || 'Data stored successfully'}`);
                 })
                 .catch(error => {
+                    alert(`Error: ${error.message}`);
                     console.error('Error:', error);
                 });
             } else {
                 alert('This extension only works for YouTube videos.');
             }
+            
         });
     });
 
