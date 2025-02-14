@@ -149,7 +149,7 @@ function createToggleButton() {
     // Create a button to toggle video injection
     const toggleButton = document.createElement("button");
     toggleButton.id = "custom-toggle-button";
-    toggleButton.innerText = "Toggle Video Injection";
+    toggleButton.innerText = "REFRESH";
 
     // Add event listener to toggle video injection
     toggleButton.addEventListener("click", toggleInjection);

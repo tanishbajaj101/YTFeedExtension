@@ -93,15 +93,16 @@
 }
 
 #custom-toggle-button {
-  background-color: #065fd4;
+  background-color: #FF0000;
   color: white;
   border: none;
   padding: 8px 16px;
   font-size: 14px;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 16px;
+  margin-left: 25px;
 }
+
 
 #custom-toggle-button:hover {
   background-color: #054daa;
