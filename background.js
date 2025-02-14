@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("YouTube Video Injector Extension Installed");
+  console.log("Install was a success.");
 });
 
 // Listens for tab changes and injects content.js when a YouTube page is opened

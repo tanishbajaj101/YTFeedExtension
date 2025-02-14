@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Enhanced YouTube Experience",
+  "name": "YTFeedRefresher",
   "version": "1.0",
-  "description": "Injects custom videos into the YouTube feed, stores video data, and retrieves YouTube video titles.",
+  "description": "Refresh your feed with a diverse variety of videos curated by people like you to break out of the algorithmic bias and enjoy a variety of videos",
   "permissions": [
     "activeTab",
     "storage"
